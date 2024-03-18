@@ -1,0 +1,25 @@
+public class ch2 {
+
+    public static void main(String[] args) {
+        int i,num,sum=0;
+        System.out.printf("1~1000中的完美數:");
+        for (num=1;num<=1000;num++)
+        {
+            sum=0;
+
+            for (i=1;i<num;i++)
+            {
+                
+                if (num%i==0){
+
+                    sum+=i;
+                }
+            }
+            if (sum==num){
+                System.out.printf(" %d",num);//加空格，數字才會變6 28 496
+            }
+        } 
+        System.out.printf("\n");
+    }
+
+}
