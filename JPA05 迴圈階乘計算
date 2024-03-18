@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class ch2 {
+	static Scanner keyboard = new Scanner(System.in);
+	public static void main(String[] args) {
+        	test();
+        	test();
+        	test();
+    	}
+	
+	public static void test() 
+	{
+        	System.out.print("Please enter one value: ");
+		int n=keyboard.nextInt();		
+		int result=1;	//用乘的，所以不能乘0
+	
+		if((n>0)&&(n<=10)) //1~10
+		{
+			for(int i=1;i<=n;i++)
+			{
+				result*=i;    //用乘的
+			}
+			System.out.printf("%d!: %d\n",n,result);	
+		}
+		else
+		{
+        	System.out.println("Error,the value is out of range.");		
+		}
+    	}
+}
