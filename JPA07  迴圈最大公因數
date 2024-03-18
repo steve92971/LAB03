@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class ch2{
+    static Scanner scn= new Scanner(System.in);
+ public static void main (String argv[]) {
+  int num1, num2;
+  System.out.println("Input:");
+  num1 = scn.nextInt();
+  while (num1 != 999) {
+   num2 = scn.nextInt();
+   System.out.println(powerOf(num1, num2));
+   System.out.println("Input:");
+   num1 = scn.nextInt();
+  }
+ }  
+ static int powerOf (int m, int n) {
+  int total = 1;
+  while (n > 0) {
+   total *= m;
+   n--;
+  }
+  return total;
+ }
+}
