@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class ch2 {
+
+    static Scanner scn=new Scanner(System.in);
+    public static void main(String[] args) {
+         int total = 0;    //總金額
+         int s = 0;        //輸入的金額 (餐點費)
+         int count = 0;    //用餐人數 (題設五位朋友)
+         double average; //計算平均
+         while(true)    //無窮迴圈
+		{
+			System.out.print("Please enter meal dollars or enter -1 to stop: ");
+			s=scn.nextInt();		
+
+			if(s!=-1)        //無窮迴圈  //(=-1)代表輸入完畢
+			{
+				total+=s;    //加總金額
+				count++;    //算 幾道菜，為了求平均值
+			}
+			else    //s=-1
+			{
+				break;    //while強制跳出，不然他會一直跑
+			}
+		}     
+		average=(double)total/count; //(double)強制浮點數
+  		System.out.println("餐點總費用:" + total);
+        	System.out.printf(" %d 道餐點平均費用為: %.2f \n",count,average);
+
+    }
+}
